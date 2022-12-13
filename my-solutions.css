@@ -40,15 +40,15 @@
 /* ESERCIZIO n.5 */
 
 .ex-5-square {
-    transition: scale 2s linear;
+    transition: transform 2s linear;
 }
 
 .ex-5-square:hover {
-    scale: 2;
+    transform: scale(2);
 }
 
 .ex-5-square:active {
-    scale: .5;
+    transform: scale(.5);
 }
 
 /* ESERCIZIO n.6 */
@@ -65,5 +65,162 @@
 
 .ex-7-img:hover {
     filter: saturate(2) hue-rotate(90deg);
+}
+
+/* ESERCIZIO n.8 */
+
+.ex-8-img {
+    transition: 2s linear;
+}
+
+.ex-8-img:hover {
+    filter: grayscale(.5) saturate(.5);
+    border-radius: 20px;
+}
+
+/* ESERCIZIO n.9 */
+
+.ex-9-img {
+    transition: 2s linear;
+}
+
+.ex-9-img:hover {
+    filter: grayscale(.5) saturate(.5);
+    border-radius: 20px;
+    transform: scale(1.5);
+}
+
+/* ESERCIZIO n.10 */
+
+.ex-10-icon {
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ESERCIZIO n.11 */
+
+.ex-11-icon:hover {
+    animation: smallrotate 2s linear;
+}
+
+@keyframes smallrotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    80% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+/* ESERCIZIO n.12 */
+
+.ex-12-button:hover .ex-12-top-white {
+    animation: movetopspace 2s linear;
+}
+
+@keyframes movetopspace {
+    0% {
+        left: 10%;
+    }
+
+    50% {
+        left: calc(100% - 60px);
+    }
+
+    100% {
+        left: 10%;
+    }
+}
+
+.ex-12-button:hover .ex-12-bottom-white {
+    animation: movebottomspace 2s linear;
+}
+
+@keyframes movebottomspace {
+    0% {
+        right: 20%;
+    }
+
+    50% {
+        right: calc(100% - 60px);
+    }
+
+    100% {
+        right: 20%;
+    }
+}
+
+/* ESERCIZIO n.13 */
+
+.ex-13-button:hover .ex-13-top-white {
+    animation: movetopspaceall 3s linear;
+}
+
+@keyframes movetopspaceall {
+    0% {
+        top: -10px;
+        left: 10%;
+    }
+
+    25% {
+    top: -10px;
+    left: calc(100% - 60px);
+    }
+
+    50% {
+        top: 100%;
+        left: calc(100% - 30px);
+    }
+
+    75% {
+        top: 100%;
+        left: -10%;
+    }
+
+    100% {
+        top: -10px;
+        left: -10px;
+    }
+}
+
+.ex-13-button:hover .ex-13-bottom-white {
+    animation: movebottomspaceall 3s linear;
+}
+
+@keyframes movebottomspaceall {
+    0% {
+        bottom: -10px;
+        right: 20%;
+    }
+
+    25% {
+        bottom: -10px;
+        right: calc(100% - 60px);
+        }
+
+    50% {
+        bottom: 100%;
+        right: calc(100% - 30px);
+    }
+
+    75% {
+        bottom: 100%;
+        right: -10%;
+    }
+
+    100% {
+        bottom: -10px;
+        right: 20%;
+    }
 }
 
